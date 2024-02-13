@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
-/*Fuente y tipografia*/
 :root {
   --body-font: "Roboto", sans-serif;
   --biggest-font-size: 3.5rem;
@@ -20,7 +19,6 @@
   }
 }
 
-/*z index*/
 :root {
   --z-back: -10;
   --z-normal: 1;
@@ -29,7 +27,6 @@
   --z-modal: 1000;
 }
 
-/*----- BASE -----*/
 *,
 ::before,
 ::after {
@@ -40,7 +37,7 @@
 body {
   margin: 3rem 0 0 0;
   font-family: var(--body-font);
-  overflow: hidden; /* Add this line to prevent scrolling */
+  overflow: hidden;
 }
 
 .main {
@@ -84,7 +81,6 @@ img {
   height: auto;
 }
 
-/*----- LAYOUT -----*/
 .bd-grid {
   max-width: 1200px;
   margin-left: 1rem;
@@ -99,7 +95,6 @@ img {
   z-index: var(--z-fixed);
 }
 
-/*----- PAGES -----*/
 .nav {
   height: 3rem;
   display: -webkit-box;
@@ -171,6 +166,7 @@ img {
 .nav__btn:hover {
   background-color: #0056b3;
 }
+
 .home {
   height: calc(100vh - 3rem);
   display: -ms-grid;
@@ -239,7 +235,6 @@ img {
   background-color: #0056b3;
 }
 
-/*ANIMATION*/
 .sos1 {
   -webkit-animation: sos1 3s infinite;
   animation: sos1 3s infinite;

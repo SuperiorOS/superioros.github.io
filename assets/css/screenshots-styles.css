@@ -2,91 +2,180 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+.main {
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container {
-  padding: 75px 0;
-  margin: 0 auto;
-  width: 1140px;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    padding: 2rem 1rem;
+    z-index: var(--z-fixed);
+    border-bottom: 1px solid gray;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+
+.nav__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.nav__item {
+  margin-bottom: 1.5rem;
+}
+
+.nav__link {
+  color: #1d1d1f;
+}
+
+.nav__link:hover {
+  color: #0056b3;
+}
+
+.nav__toggle {
+  display: inline;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.nav__toggle img {
+  width: 1.8rem;
+}
+
+.nav__btn {
+  background-color: #0071e3;
+  color: #ffffff;
+  padding: 0.375rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav__btn:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .nav {
+    height: 4rem;
+  }
+  .nav__menu {
+    margin-left: auto;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__item {
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+  }
+  .nav__toggle {
+    display: none;
+  }
 }
 
 h1 {
   position: relative;
   margin-bottom: 45px;
   font-family: "Oswald", sans-serif;
-  font-size: 44px;
+  font-size: 40px;
   text-transform: uppercase;
-  color: #424242;
   text-align: center;
 }
+.container {
+  width: 90vw;
+  height: 80vh;
+  margin: auto;
+  backdrop-filter: blur(10px) saturate(132%);
+  background-color: rgba(255, 255, 255, 0.247);
+  border-radius: 20px;
+  padding: 30px;
+}
 
-.gallery-wrap {
+.container h1 {
+  color: rgb(from color r g b);
+}
+.content {
+  padding: 8px;
+  margin: auto;
   display: flex;
-  flex-direction: row;
-  width: 2400px;
-  height: 1080px;
+  width: 800px;
+  transition: all 0.5s;
 }
 
-.item {
+.card {
   flex: 1;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: none;
-  transition: flex 0.8s ease;
-  filter: blur(1px);
-  border-radius: 25px;
-}
-.item:hover {
-  flex: 7;
-  filter: blur(0px);
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.item-1 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-220646_Superior%20Launcher.png");
+.card:hover {
+  flex: 3;
 }
 
-.item-2 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230427_Superior%20Launcher.png");
+img {
+  width: 210px;
+  height: 500px;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: all 0.5s;
+  border-radius: 6px;
 }
 
-.item-3 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230219_Superior%20Launcher.png");
-}
-
-.item-4 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230130_Settings.png");
-}
-
-.item-5 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230142_Settings.png");
-}
-
-.item-6 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230153_Settings.png");
-}
-
-.item-7 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230534_Settings.png");
-}
-
-.item-8 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230354_Settings.png");
-}
-
-.item-9 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230300_Superior%20Launcher.png");
-}
-
-.item-10 {
-  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230344_Superior%20Launcher.png");
-}
-.social {
-  position: absolute;
-  right: 35px;
-  bottom: 0;
-}
-.social img {
-  display: block;
-  width: 32px;
+.card:hover img {
+  filter: none;
 }
