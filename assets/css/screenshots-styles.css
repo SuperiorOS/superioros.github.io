@@ -1,0 +1,92 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 1140px;
+}
+
+h1 {
+  position: relative;
+  margin-bottom: 45px;
+  font-family: "Oswald", sans-serif;
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #424242;
+  text-align: center;
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 2400px;
+  height: 1080px;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+  filter: blur(1px);
+  border-radius: 25px;
+}
+.item:hover {
+  flex: 7;
+  filter: blur(0px);
+}
+
+.item-1 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-220646_Superior%20Launcher.png");
+}
+
+.item-2 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230427_Superior%20Launcher.png");
+}
+
+.item-3 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230219_Superior%20Launcher.png");
+}
+
+.item-4 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230130_Settings.png");
+}
+
+.item-5 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230142_Settings.png");
+}
+
+.item-6 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230153_Settings.png");
+}
+
+.item-7 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230534_Settings.png");
+}
+
+.item-8 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230354_Settings.png");
+}
+
+.item-9 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230300_Superior%20Launcher.png");
+}
+
+.item-10 {
+  background-image: url("https://raw.githubusercontent.com/SuperiorOS/superior_extras/master/Screenshots%20-%20Fourteen/Screenshot_20240213-230344_Superior%20Launcher.png");
+}
+.social {
+  position: absolute;
+  right: 35px;
+  bottom: 0;
+}
+.social img {
+  display: block;
+  width: 32px;
+}
