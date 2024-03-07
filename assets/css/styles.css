@@ -35,15 +35,7 @@ a {
 body {
   font-family: var(--body-font);
   margin: 0;
-  /* background: linear-gradient(
-    135deg,
-    #8c4ade,
-    #ee37b6,
-    #ff5587,
-    #ff8d60,
-    #ffc652,
-    #f9f871
-  ); */
+
   background: var(--background);
 }
 
@@ -135,7 +127,6 @@ li:hover a::after {
   display: none;
   cursor: pointer;
   align-items: center;
-  gap: 15px;
 }
 
 .openMenu-icon,
@@ -359,6 +350,24 @@ li:hover a::after {
 }
 /* END OF TOP BUTTON */
 /* ---------------------------------------------------------------------- */
+/* Credits */
+.credit {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-color);
+}
+
+.heart {
+  color: red;
+  font-size: 0.75rem;
+}
+
+.link {
+  color: var(--text-color);
+  border-bottom: 1px dashed var(--text-color);
+}
+/* END OF CREDIT */
+/* ---------------------------------------------------------------------- */
 /* MAKING WEBSITE RESPONSIVE */
 @media (max-width: 800px) {
   .nav-container {
@@ -473,5 +482,4 @@ li:hover a::after {
     right: 20px;
   }
 }
-
 /* END OF RESPONSIVE */

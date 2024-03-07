@@ -177,3 +177,88 @@ window.addEventListener("scroll", function () {
   }
 });
 /* ------------------------------------------------------------------------------------- */
+// Gallery
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".item");
+  const leftBtn = document.getElementById("leftBtn");
+  const rightBtn = document.getElementById("rightBtn");
+  const galleryWrap = document.querySelector(".gallery-wrap");
+
+  let currentIndex = 0;
+
+  // handle item navigation
+  const navigateItems = (direction) => {
+    items[currentIndex].classList.remove("focused");
+    items[currentIndex].classList.remove("focused-small");
+
+    if (direction === "next") {
+      currentIndex = (currentIndex + 1) % items.length;
+    } else {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+    }
+
+    items[currentIndex].classList.add("focused");
+    items[currentIndex].focus();
+
+    if (window.innerWidth > 700) {
+      const scrollPosition =
+        items[currentIndex].offsetLeft -
+        (galleryWrap.offsetWidth - items[currentIndex].offsetWidth) / 2;
+
+      galleryWrap.scroll({
+        left: scrollPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  if (window.innerWidth > 700) {
+    leftBtn.addEventListener("click", () => navigateItems("prev"));
+    rightBtn.addEventListener("click", () => navigateItems("next"));
+
+    items[currentIndex].classList.add("focused");
+  }
+  setInterval(() => {
+    navigateItems("next");
+  }, 4000);
+});
+
+// For devices with smaller screen width
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".item");
+  const leftBtn = document.getElementById("leftBtn");
+  const rightBtn = document.getElementById("rightBtn");
+
+  let currentIndex = 0;
+
+  // Function to handle item navigation for small screens
+  const navigateItemsSmallScreen = (direction) => {
+    items[currentIndex].classList.remove("focused");
+    items[currentIndex].classList.remove("focused-small");
+
+    if (direction === "next") {
+      currentIndex = (currentIndex + 1) % items.length;
+    } else {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+    }
+
+    items[currentIndex].classList.add("focused-small");
+    items[currentIndex].focus();
+  };
+
+  // Check if the screen width is less than 700px
+  if (window.innerWidth <= 700) {
+    // Event listeners for chevron buttons for small screens
+    leftBtn.addEventListener("click", () => navigateItemsSmallScreen("prev"));
+    rightBtn.addEventListener("click", () => navigateItemsSmallScreen("next"));
+
+    // Set initial focus on item-1 and take 100% width for small screens
+    items[currentIndex].classList.add("focused-small");
+
+    setInterval(() => {
+      navigateItemsSmallScreen("next");
+    }, 4000);
+  }
+});

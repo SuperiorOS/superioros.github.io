@@ -1,37 +1,82 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-/* Apply Roboto font to the whole document */
-html,
+:root {
+  --body-font: "Rubik", "Roboto", sans-serif;
+  --text-color: #000;
+  --background: #fff;
+  --roleColor: #8c4ade;
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--body-font);
+  margin: 0;
+  background: var(--background);
 }
 
-/* Apply Roboto font to navigation */
-nav {
-  font-family: 'Roboto', sans-serif;
+/* ---------------------------------------------------------------------- */
+/* STYLING NAVBAR */
+.nav-container {
+  padding: 8px 30px;
+  margin: 0 auto;
 }
 
-/* Your existing CSS styles */
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.main {
-  background: linear-gradient(to right, #fc5c7d, #6a82fb);
-  width: 100vw;
-  height: 100vh;
+.left {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.logo-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-color);
 }
 
 ul {
@@ -42,62 +87,339 @@ ul {
 }
 
 li {
-  margin-left: 10px;
-}
-
-li a {
-  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 300ms ease;
 }
 
-li a:hover {
-  color: #0000ff;
+li a {
+  color: var(--text-color);
+  position: relative;
 }
 
-.container {
-  width: 90vw;
-  height: 80vh;
-  margin: auto;
-  backdrop-filter: blur(10px) saturate(132%);
-  background-color: rgba(255, 255, 255, 0.247);
-  border-radius: 20px;
-  padding: 30px;
+li a:after {
+  content: "";
+  position: absolute;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  height: 2px;
+  width: 0;
+  left: 2px;
+  bottom: -8px;
+  transition: 0.3s;
 }
 
-.container h1 {
-  color: rgb(from color r g b);
+li:hover a::after {
+  width: 94%;
 }
 
-.content {
-  padding: 45px;
-  margin: auto;
-  display: flex;
-  width: 800px;
-  transition: all 0.5s;
+.theme {
+  background: transparent;
+  border: none;
 }
 
-.card {
-  flex: 1;
-  overflow: hidden;
-  transition: all 0.5s;
+.openMenu {
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+  align-items: center;
+}
+
+.openMenu-icon,
+.closeMenu-icon {
+  font-size: 2rem;
+  color: var(--text-color);
+  border: none;
+  background: transparent;
+}
+
+.closeMenu {
+  display: none;
   cursor: pointer;
 }
 
-.card:hover {
-  flex: 3;
+.sun,
+.moon {
+  padding: 12px 10px;
+  cursor: pointer;
 }
 
-img {
-  width: 210px;
-  height: 500px;
-  object-fit: cover;
-  filter: grayscale(1);
-  transition: all 0.5s;
-  border-radius: 6px;
+.moon {
+  color: #000;
 }
 
-.card:hover img {
-  filter: none;
+.sun {
+  display: none;
+  color: #fff;
 }
+
+/* END NAVBAR */
+/* ---------------------------------------------------------------------- */
+/* MAKING NAVBAR RESPONSIVE */
+@media (max-width: 800px) {
+  .nav-container {
+    padding: 6px 10px;
+  }
+
+  .logo,
+  .mobile-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .mobile-logo {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mainMenu {
+    transition: height 500ms ease;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+  }
+
+  li {
+    font-size: 1.5rem;
+    margin: 8px;
+  }
+
+  .open {
+    height: 100vh;
+  }
+
+  .closeMenu {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+  }
+
+  .openMenu {
+    display: flex;
+  }
+  .mobile-theme {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    padding: 8px 10px;
+  }
+  .logo {
+    width: 90px;
+    height: 90px;
+  }
+  .logo-text {
+    display: none;
+  }
+
+  .openMenu-icon,
+  .closeMenu-icon {
+    font-size: 1.75rem;
+  }
+  .about-logo {
+    width: 125px;
+    height: 125px;
+  }
+
+  .about-superior-text {
+    font-size: 0.92rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .core-heading,
+  .hon-heading,
+  .om-heading {
+    font-size: 1.1rem;
+  }
+
+  .content .img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .role {
+    font-size: 0.7rem;
+  }
+
+  .goTop {
+    right: 20px;
+  }
+}
+
+/* END OF RESPONSIVE */
+/* ---------------------------------------------------------------------- */
+/* GALLERY */
+.container {
+  padding: 30px 0;
+  margin: auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.gallery-wrap {
+  padding: 5px 40px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+  gap: 5px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.item {
+  overflow: hidden;
+  min-width: 109px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: min-width 0.8s ease, filter 0.8s ease, box-shadow 0.8s ease;
+  filter: blur(1px);
+  cursor: grab;
+  border-radius: 25px;
+}
+
+.focused {
+  min-width: 210px;
+  filter: blur(0px);
+  box-shadow: 0 0 0 1px #8c4ade, 0 0 0 2px #ee37b6, 0 0 0 3px #ff5587,
+    0 0 0 4px #ff8d60, 0 0 0 5px #ffc652, 0 0 0 6px #f9f871;
+}
+
+.focused-small {
+  min-width: 210px;
+  filter: blur(0px);
+  box-shadow: 0 0 0 1px #8c4ade, 0 0 0 2px #ee37b6, 0 0 0 3px #ff5587,
+    0 0 0 4px #ff8d60, 0 0 0 5px #ffc652, 0 0 0 6px #f9f871;
+}
+
+.item-1 {
+  background-image: url("/test/assets/img/About_Team.png");
+}
+
+.item-2 {
+  background-image: url("/test/assets/img/Aboutphone.png");
+}
+
+.item-3 {
+  background-image: url("/test/assets/img/Aboutphone_2.png");
+}
+
+.item-4 {
+  background-image: url("/test/assets/img/Appdrawr.png");
+}
+
+.item-5 {
+  background-image: url("/test/assets/img/Launcher.png");
+}
+
+.item-6 {
+  background-image: url("/test/assets/img/Lockscreen.png");
+}
+
+.item-7 {
+  background-image: url("/test/assets/img/QSPanel.png");
+}
+
+.item-8 {
+  background-image: url("/test/assets/img/QSPanel_2.png");
+}
+
+.item-9 {
+  background-image: url("/test/assets/img/Settings.png");
+}
+
+.item-10 {
+  background-image: url("/test/assets/img/SuperiorLab.png");
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--text-color);
+  color: var(--background);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.left-btn {
+  left: 20px;
+}
+
+.right-btn {
+  right: 20px;
+}
+/* END OF GALLERY */
+/* ---------------------------------------------------------------------- */
+/* RESPONSIVE GALLERY */
+@media (max-width: 1300px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    max-width: 800px;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    max-width: 620px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    max-width: 220px;
+  }
+  .gallery-wrap {
+    padding-left: 5px;
+  }
+  .item {
+    min-width: 210px;
+  }
+}
+
+@media (max-width: 400px) {
+  .left-btn {
+    left: 12px;
+  }
+
+  .right-btn {
+    right: 12px;
+  }
+}
+/* END */

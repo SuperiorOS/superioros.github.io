@@ -1,38 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="assets/css/screenshots-styles.css" />
+    <link rel="icon" href="assets/img/sos1.png" />
+    <title>SuperiorOS Gallery</title>
+  </head>
+  <body>
+    <main>
+      <!-- NAVBAR -->
+      <section>
+        <div class="nav-container">
+          <nav>
+            <div class="left">
+              <a href="#">
+                <div class="logo">
+                  <img src="assets/img/sos1.png" alt="SuperirOS" />
+                </div>
+              </a>
+              <a href="#"><span class="logo-text">SuperiorOS</span></a>
+            </div>
+            <div class="openMenu">
+              <button class="theme">
+                <span class="material-symbols-outlined sun" onclick="theme()">
+                  light_mode
+                </span>
+                <span class="material-symbols-outlined moon" onclick="theme();">
+                  dark_mode
+                </span>
+              </button>
+              <button class="material-symbols-outlined openMenu-icon">
+                menu
+              </button>
+            </div>
+            <ul class="mainMenu">
+              <div class="mobile-logo">
+                <img src="assets/img/sos1.png" alt="SuperirOS" />
+              </div>
+              <li><a href="">About</a></li>
+              <li>
+                <a href="https://sourceforge.net/projects/superioros/files/"
+                  >Download</a
+                >
+              </li>
+              <li><a target="_blank" href="team.html">Team</a></li>
+              <div class="closeMenu">
+                <button class="material-symbols-outlined closeMenu-icon">
+                  close
+                </button>
+              </div>
+              <div class="theme mobile-theme">
+                <span class="material-symbols-outlined sun" onclick="theme()">
+                  light_mode
+                </span>
+                <span class="material-symbols-outlined moon" onclick="theme();">
+                  dark_mode
+                </span>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <!-- END OF NAVBAR -->
 
-<head>
-  <meta charset="UTF-8">
-  <title>screenshots</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <link rel="stylesheet" href="assets/css/screenshots-styles.css">
-</head>
-
-<body>
-  <div class="main">
-    <div class="container">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Download</a></li>
-        </ul>
-      </nav>
-      <div class="content">
-        <div class="card"><img src="assets/img/Launcher.png" alt=""></div>
-        <div class="card"><img src="assets/img/Appdrawr.png" alt=""></div>
-        <div class="card"><img src="assets/img/Lockscreen.png" alt=""></div>
-        <div class="card"><img src="assets/img/Settings.png" alt=""></div>
-        <div class="card"><img src="assets/img/SuperiorLab.png" alt=""></div>
-        <div class="card"><img src="assets/img/Aboutphone.png" alt=""></div>
-        <div class="card"><img src="assets/img/Aboutphone_2.png" alt=""></div>
-        <div class="card"><img src="assets/img/About_Team.png" alt=""></div>
-        <div class="card"><img src="assets/img/QSPanel.png" alt=""></div>
-        <div class="card"><img src="assets/img/QSPanel_2.png" alt=""></div>
+      <!-- GALLERY -->
+      <div class="container">
+        <div class="gallery-wrap">
+          <div class="item item-1 focused focused-small" tabindex="0"></div>
+          <div class="item item-2" tabindex="0"></div>
+          <div class="item item-3" tabindex="0"></div>
+          <div class="item item-4" tabindex="0"></div>
+          <div class="item item-5" tabindex="0"></div>
+          <div class="item item-6" tabindex="0"></div>
+          <div class="item item-7" tabindex="0"></div>
+          <div class="item item-8" tabindex="0"></div>
+          <div class="item item-9" tabindex="0"></div>
+          <div class="item item-10" tabindex="0"></div>
+        </div>
       </div>
-    </div>
-  </div>
-
-</body>
-
+      <div class="nav-btn left-btn" id="leftBtn">
+        <span class="material-symbols-outlined"> chevron_left </span>
+      </div>
+      <div class="nav-btn right-btn" id="rightBtn">
+        <span class="material-symbols-outlined"> chevron_right </span>
+      </div>
+      <!-- GALLERY -->
+    </main>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
