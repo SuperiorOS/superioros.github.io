@@ -60,8 +60,8 @@ nav {
 }
 
 .logo {
-  width: 75px;
-  height: 75px;
+  width: 90px;
+  height: 90px;
 
   img {
     width: 100%;
@@ -75,7 +75,7 @@ nav {
 }
 
 .logo-text {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--text-color);
 }
@@ -92,7 +92,7 @@ li {
   padding: 14px 16px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.3043rem;
   transition: all 300ms ease;
 }
 
@@ -120,10 +120,11 @@ li:hover a::after {
 .theme {
   background: transparent;
   border: none;
+  display: flex;
+  align-items: center;
 }
 
 .openMenu {
-  margin: 20px;
   display: none;
   cursor: pointer;
   align-items: center;
@@ -131,7 +132,7 @@ li:hover a::after {
 
 .openMenu-icon,
 .closeMenu-icon {
-  font-size: 2rem;
+  font-size: 2.6086rem;
   color: var(--text-color);
   border: none;
   background: transparent;
@@ -144,8 +145,9 @@ li:hover a::after {
 
 .sun,
 .moon {
-  padding: 12px 10px;
+  padding: 6px 5px;
   cursor: pointer;
+  font-size: 1.75rem;
 }
 
 .moon {
@@ -161,7 +163,7 @@ li:hover a::after {
 /* ---------------------------------------------------------------------- */
 /* STYLING HERO SECTION */
 .about-container {
-  max-width: 500px;
+  max-width: 600px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -182,9 +184,9 @@ li:hover a::after {
 .about-superior-text {
   text-align: center;
   color: var(--text-color);
-  font-size: 1.02rem;
-  line-height: 1.3rem;
-  margin-bottom: 20px;
+  font-size: 1.332rem;
+  line-height: 1.6rem;
+  margin-bottom: 40px;
   text-wrap: wrap;
 }
 
@@ -193,7 +195,7 @@ li:hover a::after {
   background-color: #7943ef;
   border: none;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 1.176rem;
   color: white;
   transition: all 300ms ease;
   cursor: pointer;
@@ -226,7 +228,7 @@ li:hover a::after {
 }
 
 .footer-links {
-  font-size: 1rem;
+  font-size: 1.3043rem;
 }
 
 /* END OF STYLING LINKS */
@@ -261,7 +263,7 @@ li:hover a::after {
 .hon-heading,
 .om-heading {
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.63rem;
   text-align: center;
   margin-bottom: 50px;
   color: var(--text-color);
@@ -319,7 +321,7 @@ li:hover a::after {
 
 .name {
   color: var(--text-color);
-  font-size: 1.2rem;
+  font-size: 1.568rem;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -338,8 +340,8 @@ li:hover a::after {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: var(--text-color);
   color: var(--background);
@@ -353,13 +355,13 @@ li:hover a::after {
 /* Credits */
 .credit {
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.976rem;
   color: var(--text-color);
 }
 
 .heart {
   color: red;
-  font-size: 0.75rem;
+  font-size: 0.976rem;
 }
 
 .link {
@@ -408,7 +410,7 @@ li:hover a::after {
   }
 
   li {
-    font-size: 1.5rem;
+    font-size: 1.957rem;
     margin: 8px;
   }
 
@@ -445,7 +447,7 @@ li:hover a::after {
 
   .openMenu-icon,
   .closeMenu-icon {
-    font-size: 1.75rem;
+    font-size: 2.28rem;
   }
   .about-logo {
     width: 125px;
@@ -453,7 +455,7 @@ li:hover a::after {
   }
 
   .about-superior-text {
-    font-size: 0.92rem;
+    font-size: 1.2rem;
   }
   .footer-container {
     flex-direction: column;
@@ -462,7 +464,7 @@ li:hover a::after {
   .core-heading,
   .hon-heading,
   .om-heading {
-    font-size: 1.1rem;
+    font-size: 1.43rem;
   }
 
   .content .img {
@@ -471,11 +473,11 @@ li:hover a::after {
   }
 
   .name {
-    font-size: 1rem;
+    font-size: 1.3043rem;
   }
 
   .role {
-    font-size: 0.7rem;
+    font-size: 0.915rem;
   }
 
   .goTop {
