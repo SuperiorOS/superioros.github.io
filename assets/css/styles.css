@@ -255,86 +255,6 @@ li:hover a::after {
 
 /* END OF ANIAMTION FOR HERO SECTION */
 /* ---------------------------------------------------------------------- */
-/* STYLING TEAM TAB */
-.core-team {
-  margin-top: 50px;
-}
-.core-heading,
-.hon-heading,
-.om-heading {
-  font-weight: 500;
-  font-size: 1.63rem;
-  text-align: center;
-  margin-bottom: 50px;
-  color: var(--text-color);
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  margin: 0 40px;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
-}
-
-.card {
-  width: 300px;
-  background: #ffffff83;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-}
-
-.content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.content .img {
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-  padding: 3px;
-  background: linear-gradient(
-    #8c4ade,
-    #ee37b6,
-    #ff5587,
-    #ff8d60,
-    #ffc652,
-    #f9f871
-  );
-  margin-bottom: 14px;
-}
-
-.img img {
-  height: 100%;
-  width: 100%;
-  border: 3px solid #ffff;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.name {
-  color: var(--text-color);
-  font-size: 1.568rem;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.role {
-  font-size: 0.85rem;
-  padding: 2px 10px;
-  background-color: #8d4ade7e;
-  color: var(--roleColor);
-  border-radius: 25px;
-}
-/* END OF TEAM TAB  */
-/* ---------------------------------------------------------------------- */
 /* TOP BUTTON */
 .goTop {
   position: fixed;
@@ -378,7 +298,8 @@ li:hover a::after {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1.1);
   }
   50% {

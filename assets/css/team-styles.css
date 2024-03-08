@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --body-font: "Rubik", "Roboto", sans-serif;
+  --text-color: #000;
+  --background: #fff;
+  --roleColor: #8c4ade;
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+
+  background: var(--background);
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------------- */
+/* STYLING NAVBAR */
+.nav-container {
+  padding: 8px 30px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.3043rem;
+  transition: all 300ms ease;
+}
+
+li a {
+  color: var(--text-color);
+  position: relative;
+}
+
+li a:after {
+  content: "";
+  position: absolute;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  height: 2px;
+  width: 0;
+  left: 2px;
+  bottom: -8px;
+  transition: 0.3s;
+}
+
+li:hover a::after {
+  width: 94%;
+}
+
+.theme {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.openMenu {
+  display: none;
+  cursor: pointer;
+  align-items: center;
+}
+
+.openMenu-icon,
+.closeMenu-icon {
+  font-size: 2.6086rem;
+  color: var(--text-color);
+  border: none;
+  background: transparent;
+}
+
+.closeMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.sun,
+.moon {
+  padding: 6px 5px;
+  cursor: pointer;
+  font-size: 1.75rem;
+}
+
+.moon {
+  color: #000;
+}
+
+.sun {
+  display: none;
+  color: #fff;
+}
+
+/* ENd NAVBAR */
+/* ---------------------------------------------------------------------- */
+/* STYLING TEAM TAB */
+.core-team {
+  margin-top: 50px;
+}
+
+.core-heading,
+.hon-heading,
+.om-heading {
+  font-weight: 500;
+  font-size: 1.63rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--text-color);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.card {
+  width: 300px;
+  background: #ffffff83;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content .img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(#ac44f2, #7552f2, #0511f2, #555bd9);
+  margin-bottom: 14px;
+}
+
+.img img {
+  height: 100%;
+  width: 100%;
+  border: 3px solid #ffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  color: var(--text-color);
+  font-size: 1.568rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.role {
+  font-size: 0.85rem;
+  padding: 2px 10px;
+  background-color: #ac44f2;
+  color: var(--text-color);
+  border-radius: 25px;
+}
+
+/* END OF TEAM TAB  */
+/* ---------------------------------------------------------------------- */
+/* TOP BUTTON */
+.goTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--text-color);
+  color: var(--background);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+/* END OF TOP BUTTON */
+/* ---------------------------------------------------------------------- */
+/* Credits */
+.credit {
+  text-align: center;
+  font-size: 0.976rem;
+  color: var(--text-color);
+}
+
+.fa-heart {
+  color: red;
+  font-size: 0.976rem;
+}
+
+.link {
+  color: var(--text-color);
+  border-bottom: 1px none var(--text-color);
+}
+
+.link:hover {
+  color: blue;
+}
+
+.pulse {
+  animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+}
+
+/* END OF CREDIT */
+/* ---------------------------------------------------------------------- */
+/* MAKING WEBSITE RESPONSIVE */
+@media (max-width: 800px) {
+  .nav-container {
+    padding: 6px 10px;
+  }
+
+  .logo,
+  .mobile-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .mobile-logo {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mainMenu {
+    transition: height 500ms ease;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+  }
+
+  li {
+    font-size: 1.957rem;
+    margin: 8px;
+  }
+
+  .open {
+    height: 100vh;
+  }
+
+  .closeMenu {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+  }
+
+  .openMenu {
+    display: flex;
+  }
+
+  .mobile-theme {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    padding: 8px 10px;
+  }
+
+  .logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .openMenu-icon,
+  .closeMenu-icon {
+    font-size: 2.28rem;
+  }
+
+  .about-logo {
+    width: 125px;
+    height: 125px;
+  }
+
+  .about-superior-text {
+    font-size: 1.2rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .core-heading,
+  .hon-heading,
+  .om-heading {
+    font-size: 1.43rem;
+  }
+
+  .content .img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .name {
+    font-size: 1.3043rem;
+  }
+
+  .role {
+    font-size: 0.915rem;
+  }
+
+  .goTop {
+    right: 20px;
+  }
+}
+
+/* END OF RESPONSIVE */
