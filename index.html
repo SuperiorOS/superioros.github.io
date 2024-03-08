@@ -1,127 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
+      integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>SuperiorOS</title>
+    <link rel="icon" href="assets/img/sos1.png" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
-    integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <title>SuperiorOS</title>
-  <link rel="icon" href="assets/img/sos1.png" />
-</head>
-
-<body>
-  <main id="main">
-    <!-- NAVBAR -->
-    <section>
-      <div class="nav-container container">
-        <nav>
-          <div class="left">
-            <a href="#">
-              <div class="logo">
-                <img src="assets/img/sos1.png" alt="SuperirOS" />
-              </div>
-            </a>
-            <a href="#"><span class="logo-text">SuperiorOS</span></a>
-          </div>
-          <div class="openMenu">
-            <button class="theme">
-              <span class="material-symbols-outlined sun" onclick="theme()">
-                light_mode
-              </span>
-              <span class="material-symbols-outlined moon" onclick="theme();">
-                dark_mode
-              </span>
-            </button>
-            <button class="material-symbols-outlined openMenu-icon">
-              menu
-            </button>
-          </div>
-          <ul class="mainMenu">
-            <div class="mobile-logo">
-              <img src="assets/img/sos1.png" alt="SuperirOS" />
+  <body>
+    <main id="main">
+      <!-- NAVBAR -->
+      <section>
+        <div class="nav-container container">
+          <nav>
+            <div class="left">
+              <a href="#">
+                <div class="logo">
+                  <img src="assets/img/sos1.png" alt="SuperirOS" />
+                </div>
+              </a>
+              <a href="#"><span class="logo-text">SuperiorOS</span></a>
             </div>
-            <li>
-              <a href="screenshots.html" target="_blank">Gallery</a>
-            </li>
-            <li><a target="_blank" href="team.html">Team</a></li>
-            <li>
-              <a href="https://sourceforge.net/projects/superioros/files/">Download</a>
-            </li>
-            <div class="closeMenu">
-              <button class="material-symbols-outlined closeMenu-icon">
-                close
+            <div class="openMenu">
+              <button class="theme">
+                <span class="material-symbols-outlined sun" onclick="theme()">
+                  light_mode
+                </span>
+                <span class="material-symbols-outlined moon" onclick="theme();">
+                  dark_mode
+                </span>
+              </button>
+              <button class="material-symbols-outlined openMenu-icon">
+                menu
               </button>
             </div>
-            <div class="theme mobile-theme">
-              <span class="material-symbols-outlined sun" onclick="theme()">
-                light_mode
-              </span>
-              <span class="material-symbols-outlined moon" onclick="theme();">
-                dark_mode
-              </span>
-            </div>
-          </ul>
-        </nav>
-      </div>
-    </section>
-    <!-- END OF NAVBAR -->
-    <!-- -------------------------------------------------------------------------------- -->
-    <!-- HERO SECTION -->
-    <section>
-      <div class="about-container container">
-        <div class="about-logo">
-          <img src="assets/img/sos1.png" alt="SuperiorOS" class="sos1" />
+            <ul class="mainMenu">
+              <div class="mobile-logo">
+                <img src="assets/img/sos1.png" alt="SuperirOS" />
+              </div>
+              <li>
+                <a href="screenshots.html" target="_blank">Gallery</a>
+              </li>
+              <li><a target="_blank" href="team.html">Team</a></li>
+              <li>
+                <a href="https://sourceforge.net/projects/superioros/files/"
+                  >Download</a
+                >
+              </li>
+              <div class="closeMenu">
+                <button class="material-symbols-outlined closeMenu-icon">
+                  close
+                </button>
+              </div>
+              <div class="theme mobile-theme">
+                <span class="material-symbols-outlined sun" onclick="theme()">
+                  light_mode
+                </span>
+                <span class="material-symbols-outlined moon" onclick="theme();">
+                  dark_mode
+                </span>
+              </div>
+            </ul>
+          </nav>
         </div>
-        <div class="about-superior-text">
-          Elevate your Android experience with our custom ROM based on AOSP.
-          Enjoy lightning-fast performance, extensive customization options,
-          and rock-solid stability.
-        </div>
-        <a href="https://sourceforge.net/projects/superioros/files/">
-          <button class="download-superior">Download SuperiorOS</button>
-        </a>
-      </div>
-      <div class="footer-container container">
-        <div class="github-link">
-          <a class="github-link-logo" href="https://github.com/SuperiorOS">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="25px" height="25px">
-              <path
-                d="M25,8c9.389,0,17,7.611,17,17c0,7.548-4.921,13.944-11.729,16.163c0.002-0.006,0.005-0.016,0.005-0.016	s-1.147-0.538-1.123-1.498c0.027-1.056,0-3.521,0-4.426c0-1.553-0.983-2.654-0.983-2.654s7.709,0.087,7.709-8.139	c0-3.174-1.659-4.825-1.659-4.825s0.871-3.388-0.302-4.825c-1.315-0.142-3.669,1.257-4.675,1.91c0,0-1.593-0.653-4.244-0.653	c-2.65,0-4.244,0.653-4.244,0.653c-1.005-0.653-3.36-2.052-4.675-1.91c-1.173,1.437-0.302,4.825-0.302,4.825	s-1.659,1.652-1.659,4.825c0,8.226,7.709,8.139,7.709,8.139s-0.777,0.878-0.946,2.168c-0.538,0.183-1.33,0.408-1.969,0.408	c-1.673,0-2.946-1.626-3.412-2.379c-0.46-0.742-1.403-1.365-2.281-1.365c-0.579,0-0.861,0.289-0.861,0.62	c0,0.331,0.811,0.562,1.347,1.175c1.129,1.294,1.109,4.202,5.132,4.202c0.437,0,1.329-0.107,2-0.198	c-0.004,0.916-0.005,1.882,0.009,2.447c0.024,0.96-1.123,1.498-1.123,1.498s0.003,0.01,0.005,0.016C12.921,38.944,8,32.548,8,25	C8,15.611,15.611,8,25,8z" />
-            </svg>
-          </a>
-          <a href="https://github.com/SuperiorOS">
-            <h2 class="footer-links">Github</h2>
-          </a>
-        </div>
-        <div class="support-link">
-          <a class="support-link-logo" href="https://t.me/superioros">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="25px" height="25px">
-              <path
-                d="M25,8c9.389,0,17,7.611,17,17s-7.611,17-17,17S8,34.389,8,25S15.611,8,25,8z M30.864,31.93	c0.312-0.959,1.778-10.521,1.958-12.405c0.055-0.571-0.126-0.95-0.478-1.119c-0.427-0.205-1.06-0.103-1.794,0.162	c-1.007,0.363-13.876,5.827-14.62,6.144c-0.704,0.3-1.372,0.626-1.372,1.1c0,0.333,0.198,0.52,0.742,0.714	c0.566,0.202,1.992,0.634,2.834,0.866c0.811,0.224,1.734,0.03,2.251-0.292c0.548-0.341,6.878-4.576,7.332-4.947	c0.454-0.371,0.816,0.104,0.445,0.476c-0.371,0.371-4.715,4.588-5.289,5.172c-0.696,0.709-0.202,1.443,0.265,1.738	c0.533,0.336,4.365,2.906,4.943,3.319c0.578,0.412,1.162,0.599,1.699,0.599C30.316,33.456,30.597,32.749,30.864,31.93z" />
-            </svg>
-          </a>
-          <a href="https://t.me/superioros">
-            <h2 class="footer-links">Support</h2>
+      </section>
+      <!-- END OF NAVBAR -->
+      <!-- -------------------------------------------------------------------------------- -->
+      <!-- HERO SECTION -->
+      <section>
+        <div class="about-container container">
+          <div class="about-logo">
+            <img src="assets/img/sos1.png" alt="SuperiorOS" class="sos1" />
+          </div>
+          <div class="about-superior-text">
+            Elevate your Android experience with our custom ROM based on AOSP.
+            Enjoy lightning-fast performance, extensive customization options,
+            and rock-solid stability.
+          </div>
+          <a href="https://sourceforge.net/projects/superioros/files/">
+            <button class="download-superior">Download SuperiorOS</button>
           </a>
         </div>
-      </div>
-    </section>
-    <!-- END OF HERO SECTION -->
-    <!-- -------------------------------------------------------------------------------- -->
-    <!-- CREDITS -->
-    <p class="credit">
-      Made with <i class="fas fa-heart pulse"></i> by
-      <a class="link" href="https://t.me/Spufyyffett">Spufyyffett</a>
-      & <a class="link" href="https://t.me/Darkstar085">S I P U N</a>
-    </p>
-    <!-- END OF CREDITS -->
-  </main>
-  <script src="assets/js/main.js"></script>
-</body>
-
+        <div class="footer-container container">
+          <div class="github-link">
+            <a class="github-link-logo" href="https://github.com/SuperiorOS">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="25px"
+                height="25px"
+              >
+                <path
+                  d="M25,8c9.389,0,17,7.611,17,17c0,7.548-4.921,13.944-11.729,16.163c0.002-0.006,0.005-0.016,0.005-0.016	s-1.147-0.538-1.123-1.498c0.027-1.056,0-3.521,0-4.426c0-1.553-0.983-2.654-0.983-2.654s7.709,0.087,7.709-8.139	c0-3.174-1.659-4.825-1.659-4.825s0.871-3.388-0.302-4.825c-1.315-0.142-3.669,1.257-4.675,1.91c0,0-1.593-0.653-4.244-0.653	c-2.65,0-4.244,0.653-4.244,0.653c-1.005-0.653-3.36-2.052-4.675-1.91c-1.173,1.437-0.302,4.825-0.302,4.825	s-1.659,1.652-1.659,4.825c0,8.226,7.709,8.139,7.709,8.139s-0.777,0.878-0.946,2.168c-0.538,0.183-1.33,0.408-1.969,0.408	c-1.673,0-2.946-1.626-3.412-2.379c-0.46-0.742-1.403-1.365-2.281-1.365c-0.579,0-0.861,0.289-0.861,0.62	c0,0.331,0.811,0.562,1.347,1.175c1.129,1.294,1.109,4.202,5.132,4.202c0.437,0,1.329-0.107,2-0.198	c-0.004,0.916-0.005,1.882,0.009,2.447c0.024,0.96-1.123,1.498-1.123,1.498s0.003,0.01,0.005,0.016C12.921,38.944,8,32.548,8,25	C8,15.611,15.611,8,25,8z"
+                />
+              </svg>
+            </a>
+            <a href="https://github.com/SuperiorOS">
+              <h2 class="footer-links">Github</h2>
+            </a>
+          </div>
+          <div class="support-link">
+            <a class="support-link-logo" href="https://telegram.me/superioros">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="25px"
+                height="25px"
+              >
+                <path
+                  d="M25,8c9.389,0,17,7.611,17,17s-7.611,17-17,17S8,34.389,8,25S15.611,8,25,8z M30.864,31.93	c0.312-0.959,1.778-10.521,1.958-12.405c0.055-0.571-0.126-0.95-0.478-1.119c-0.427-0.205-1.06-0.103-1.794,0.162	c-1.007,0.363-13.876,5.827-14.62,6.144c-0.704,0.3-1.372,0.626-1.372,1.1c0,0.333,0.198,0.52,0.742,0.714	c0.566,0.202,1.992,0.634,2.834,0.866c0.811,0.224,1.734,0.03,2.251-0.292c0.548-0.341,6.878-4.576,7.332-4.947	c0.454-0.371,0.816,0.104,0.445,0.476c-0.371,0.371-4.715,4.588-5.289,5.172c-0.696,0.709-0.202,1.443,0.265,1.738	c0.533,0.336,4.365,2.906,4.943,3.319c0.578,0.412,1.162,0.599,1.699,0.599C30.316,33.456,30.597,32.749,30.864,31.93z"
+                />
+              </svg>
+            </a>
+            <a href="https://telegram.me/superioros">
+              <h2 class="footer-links">Support</h2>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- END OF HERO SECTION -->
+      <!-- -------------------------------------------------------------------------------- -->
+      <!-- CREDITS -->
+      <p class="credit">
+        Made with <i class="fas fa-heart pulse"></i> by
+        <a class="link" href="https://t.me/Spufyyffett">Spufyyffett</a>
+        & <a class="link" href="https://t.me/Darkstar085">S I P U N</a>
+      </p>
+      <!-- END OF CREDITS -->
+    </main>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

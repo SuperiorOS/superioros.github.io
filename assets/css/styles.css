@@ -35,7 +35,6 @@ a {
 body {
   font-family: var(--body-font);
   margin: 0;
-
   background: var(--background);
 }
 
@@ -199,9 +198,11 @@ li:hover a::after {
   color: white;
   transition: all 300ms ease;
   cursor: pointer;
+  border: 1px solid #7943ef;
 
   &:hover {
-    background-color: #5d35b8;
+    background-color: var(--background);
+    color: var(--text-color);
   }
 }
 /* END OF HERO SECTION */

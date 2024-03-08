@@ -270,6 +270,7 @@ li:hover a::after {
 .link {
   color: var(--text-color);
   border-bottom: 1px none var(--text-color);
+  transition: all 300ms ease;
 }
 
 .link:hover {
