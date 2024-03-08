@@ -359,15 +359,33 @@ li:hover a::after {
   color: var(--text-color);
 }
 
-.heart {
+.fa-heart {
   color: red;
   font-size: 0.976rem;
 }
 
 .link {
   color: var(--text-color);
-  border-bottom: 1px dashed var(--text-color);
+  border-bottom: 1px none var(--text-color);
 }
+
+.link:hover {
+  color: blue;
+}
+
+.pulse {
+  animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+
 /* END OF CREDIT */
 /* ---------------------------------------------------------------------- */
 /* MAKING WEBSITE RESPONSIVE */
