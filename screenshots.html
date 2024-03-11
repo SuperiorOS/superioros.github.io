@@ -1,125 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
+      integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/screenshots-styles.css" />
+    <link rel="icon" href="assets/img/gallery.png" />
+    <title>SuperiorOS Gallery</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
-    integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/screenshots-styles.css" />
-  <link rel="icon" href="assets/img/gallery.png" />
-  <title>SuperiorOS Gallery</title>
-</head>
-
-<body>
-  <main>
-    <!-- NAVBAR -->
-    <section>
-      <div class="nav-container">
-        <nav>
-          <div class="left">
-            <a href="screenshots.html">
-              <div class="logo">
-                <img src="assets/img/gallery.png" alt="SuperirOS" />
-              </div>
-            </a>
-            <a href="#"><span class="logo-text">SuperiorOS</span></a>
-          </div>
-          <div class="openMenu">
-            <button class="theme">
-              <span class="material-symbols-outlined sun" onclick="theme()">
-                light_mode
-              </span>
-              <span class="material-symbols-outlined moon" onclick="theme();">
-                dark_mode
-              </span>
-            </button>
-            <button class="material-symbols-outlined openMenu-icon">
-              menu
-            </button>
-          </div>
-          <ul class="mainMenu">
-            <div class="mobile-logo">
-              <img src="assets/img/gallery.png" alt="SuperirOS" />
+  <body>
+    <main>
+      <!-- NAVBAR -->
+      <section>
+        <div class="nav-container">
+          <nav>
+            <div class="left">
+              <a href="screenshots.html">
+                <div class="logo">
+                  <img src="assets/img/gallery.png" alt="SuperirOS" />
+                </div>
+              </a>
+              <a href="#"><span class="logo-text">SuperiorOS</span></a>
             </div>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li>
-              <a href="https://sourceforge.net/projects/superioros/files/">Download</a>
-            </li>
-            <div class="closeMenu">
-              <button class="material-symbols-outlined closeMenu-icon">
-                close
+            <div class="openMenu">
+              <button class="theme">
+                <span class="material-symbols-outlined sun" onclick="theme()">
+                  light_mode
+                </span>
+                <span class="material-symbols-outlined moon" onclick="theme();">
+                  dark_mode
+                </span>
+              </button>
+              <button class="material-symbols-outlined openMenu-icon">
+                menu
               </button>
             </div>
-            <div class="theme mobile-theme">
-              <span class="material-symbols-outlined sun" onclick="theme()">
-                light_mode
-              </span>
-              <span class="material-symbols-outlined moon" onclick="theme();">
-                dark_mode
-              </span>
-            </div>
-          </ul>
-        </nav>
+            <ul class="mainMenu">
+              <div class="mobile-logo">
+                <img src="assets/img/gallery.png" alt="SuperirOS" />
+              </div>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li>
+                <a href="https://sourceforge.net/projects/superioros/files/"
+                  >Download</a
+                >
+              </li>
+              <div class="closeMenu">
+                <button class="material-symbols-outlined closeMenu-icon">
+                  close
+                </button>
+              </div>
+              <div class="theme mobile-theme">
+                <span class="material-symbols-outlined sun" onclick="theme()">
+                  light_mode
+                </span>
+                <span class="material-symbols-outlined moon" onclick="theme();">
+                  dark_mode
+                </span>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <!-- END OF NAVBAR -->
+
+      <p class="gallery-heading">Screenshots</p>
+
+      <!-- GALLERY -->
+      <div class="container">
+        <span class="slider" id="slider1"></span>
+        <span class="slider" id="slider2"></span>
+        <span class="slider" id="slider3"></span>
+        <span class="slider" id="slider4"></span>
+        <span class="slider" id="slider5"></span>
+        <span class="slider" id="slider6"></span>
+        <span class="slider" id="slider7"></span>
+        <span class="slider" id="slider8"></span>
+        <span class="slider" id="slider9"></span>
+        <span class="slider" id="slider10"></span>
+
+        <div class="imgContainer">
+          <div class="slide_div" id="slide_1">
+            <img src="assets/img/Launcher.png" alt="" class="img" id="img1" />
+            <a href="#slider1" class="button" id="button1"></a>
+          </div>
+          <div class="slide_div" id="slide_2">
+            <img src="assets/img/Lockscreen.png" alt="" class="img" id="img2" />
+            <a href="#slider2" class="button" id="button2"></a>
+          </div>
+          <div class="slide_div" id="slide_3">
+            <img src="assets/img/Settings.png" alt="" class="img" id="img3" />
+            <a href="#slider3" class="button" id="button3"></a>
+          </div>
+          <div class="slide_div" id="slide_4">
+            <img
+              src="assets/img/SuperiorLab.png"
+              alt=""
+              class="img"
+              id="img4"
+            />
+            <a href="#slider4" class="button" id="button4"></a>
+          </div>
+          <div class="slide_div" id="slide_5">
+            <img src="assets/img/About_Team.png" alt="" class="img" id="img5" />
+            <a href="#slider5" class="button" id="button5"></a>
+          </div>
+          <div class="slide_div" id="slide_6">
+            <img src="assets/img/Aboutphone.png" alt="" class="img" id="img6" />
+            <a href="#slider6" class="button" id="button6"></a>
+          </div>
+          <div class="slide_div" id="slide_7">
+            <img
+              src="assets/img/Aboutphone_2.png"
+              alt=""
+              class="img"
+              id="img7"
+            />
+            <a href="#slider7" class="button" id="button7"></a>
+          </div>
+          <div class="slide_div" id="slide_8">
+            <img src="assets/img/Appdrawr.png" alt="" class="img" id="img8" />
+            <a href="#slider8" class="button" id="button8"></a>
+          </div>
+          <div class="slide_div" id="slide_9">
+            <img src="assets/img/QSPanel.png" alt="" class="img" id="img9" />
+            <a href="#slider9" class="button" id="button9"></a>
+          </div>
+          <div class="slide_div" id="slide_10">
+            <img src="assets/img/QSPanel_2.png" alt="" class="img" id="img10" />
+            <a href="#slider10" class="button" id="button10"></a>
+          </div>
+        </div>
       </div>
-    </section>
-    <!-- END OF NAVBAR -->
-
-    <p class="gallery-heading">Screenshots</p>
-
-    <!-- GALLERY -->
-    <div class="container">
-      <span class="slider" id="slider1"></span>
-      <span class="slider" id="slider2"></span>
-      <span class="slider" id="slider3"></span>
-      <span class="slider" id="slider4"></span>
-      <span class="slider" id="slider5"></span>
-      <span class="slider" id="slider6"></span>
-      <span class="slider" id="slider7"></span>
-
-      <div class="imgContainer">
-        <div class="slide_div" id="slide_1">
-          <img src="assets/img/Launcher.png" alt="" class="img" id="img1" />
-          <a href="#slider1" class="button" id="button1"></a>
-        </div>
-        <div class="slide_div" id="slide_2">
-          <img src="assets/img/Lockscreen.png" alt="" class="img" id="img2" />
-          <a href="#slider2" class="button" id="button2"></a>
-        </div>
-        <div class="slide_div" id="slide_3">
-          <img src="assets/img/Settings.png" alt="" class="img" id="img3" />
-          <a href="#slider3" class="button" id="button3"></a>
-        </div>
-        <div class="slide_div" id="slide_4">
-          <img src="assets/img/SuperiorLab.png" alt="" class="img" id="img4" />
-          <a href="#slider4" class="button" id="button4"></a>
-        </div>
-        <div class="slide_div" id="slide_5">
-          <img src="assets/img/About_Team.png" alt="" class="img" id="img5" />
-          <a href="#slider5" class="button" id="button5"></a>
-        </div>
-        <div class="slide_div" id="slide_6">
-          <img src="assets/img/Aboutphone.png" alt="" class="img" id="img6" />
-          <a href="#slider6" class="button" id="button6"></a>
-        </div>
-        <div class="slide_div" id="slide_7">
-          <img src="assets/img/Aboutphone_2.png" alt="" class="img" id="img7" />
-          <a href="#slider7" class="button" id="button7"></a>
-        </div>
-      </div>
-    </div>
-    <!--END OF GALLERY -->
-    <p class="credit">
-      Made with <i class="fas fa-heart pulse"></i> by
-      <a class="link" href="https://t.me/Spufyyffett">Spufyyffett</a>
-      & <a class="link" href="https://t.me/Darkstar085">S I P U N</a>
-    </p>
-  </main>
-  <script src="assets/js/main.js"></script>
-</body>
-
+      <!--END OF GALLERY -->
+      <p class="credit">
+        Made with <i class="fas fa-heart pulse"></i> by
+        <a class="link" href="https://t.me/Spufyyffett">Spufyyffett</a>
+        & <a class="link" href="https://t.me/Darkstar085">S I P U N</a>
+      </p>
+    </main>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
