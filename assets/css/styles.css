@@ -191,7 +191,7 @@ li:hover a::after {
 
 .download-superior {
   padding: 10px 20px;
-  background-color: #7943ef;
+  background: linear-gradient(to right, #FC822C, #F22248, #BF308D, #6A44F2);
   border: none;
   border-radius: 8px;
   font-size: 1.176rem;
@@ -235,7 +235,7 @@ li:hover a::after {
 /* END OF STYLING LINKS */
 /* ---------------------------------------------------------------------- */
 /* ANIMATION FOR HERO SECTION */
-.sos1 {
+.home {
   -webkit-animation: sos1 3s infinite;
   animation: sos1 3s infinite;
 }
