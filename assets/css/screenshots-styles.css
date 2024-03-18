@@ -20,9 +20,7 @@ html {
   tap-highlight-color: rgba(0, 0, 0, 0);
   outline: none;
 }
-::-webkit-scrollbar {
-  display: none;
-}
+
 *,
 ::before,
 ::after {
@@ -249,170 +247,51 @@ li:hover a::after {
   color: var(--text-color);
   text-align: center;
   font-weight: 500;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
 }
 /* GALLERY */
-.container {
-  width: 100%;
-  height: 75vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow: hidden;
+.swiper {
+  width: 90vw;
+  height: 70vh;
 }
 
-.imgContainer {
-  width: 100%;
-  height: 570px;
-  position: absolute;
-  left: 0;
-  display: flex;
-  justify-content: center;
+.swiper-wrapper {
   align-items: center;
-  transition: 1s;
 }
 
-.slide_div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 30px;
+.swiper-slide {
+  height: 90%;
+  width: 300px;
+  transition: all 300ms ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+  }
 }
 
-.img {
+.swiper-pagination {
+  margin-top: 15px;
   position: relative;
-  width: 240px;
-  height: 400px;
-  filter: saturate(10%);
-  transition: 0.7s;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 20px;
+  z-index: 1;
 }
 
-.button {
-  position: absolute;
-  width: 240px;
-  height: 400px;
-  transition: 0.7s;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 20px;
+.swiper-pagination-bullet {
+  background: var(--bullet);
 }
 
-.button:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+.swiper-slide.active {
+  transform: scale(1.1);
+  transition: 300ms;
 }
-
-#slider1:target ~ .imgContainer #img1,
-#slider1:target ~ .imgContainer #button1 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
+@media (max-width: 800px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }
-
-#slider2:target ~ .imgContainer #img2,
-#slider2:target ~ .imgContainer #button2 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
-}
-
-#slider3:target ~ .imgContainer #img3,
-#slider3:target ~ .imgContainer #button3 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
-}
-
-#slider4:target ~ .imgContainer #img4,
-#slider4:target ~ .imgContainer #button4 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
-}
-
-#slider5:target ~ .imgContainer #img5,
-#slider5:target ~ .imgContainer #button5 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
-}
-
-#slider6:target ~ .imgContainer #img6,
-#slider6:target ~ .imgContainer #button6 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
-}
-
-#slider7:target ~ .imgContainer #img7,
-#slider7:target ~ .imgContainer #button7 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
-}
-
-#slider8:target ~ .imgContainer #img8,
-#slider8:target ~ .imgContainer #button8 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
-}
-
-#slider9:target ~ .imgContainer #img9,
-#slider9:target ~ .imgContainer #button9 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
-}
-
-#slider10:target ~ .imgContainer #img10,
-#slider10:target ~ .imgContainer #button10 {
-  width: 240px;
-  height: 570px;
-  background-color: transparent;
-  filter: saturate(100%);
-}
-
-#slider1:target ~ .imgContainer {
-  left: 75%;
-}
-#slider2:target ~ .imgContainer {
-  left: 60%;
-}
-#slider3:target ~ .imgContainer {
-  left: 45%;
-}
-#slider4:target ~ .imgContainer {
-  left: 30%;
-}
-#slider5:target ~ .imgContainer {
-  left: 10%;
-}
-#slider6:target ~ .imgContainer {
-  left: -5%;
-}
-#slider7:target ~ .imgContainer {
-  left: -20%;
-}
-#slider8:target ~ .imgContainer {
-  left: -35%;
-}
-#slider9:target ~ .imgContainer {
-  left: -50%;
-}
-#slider10:target ~ .imgContainer {
-  left: -65%;
-}
-
 /* END OF GALLERY */
 /* ---------------------------------------------------------------------- */
 /* CREDITS */
@@ -452,6 +331,3 @@ li:hover a::after {
 }
 /* END OF CREDITS */
 /* ------------------------------------------------------------------------ */
-/* RESPONSIVE GALLERY */
-
-/* END */

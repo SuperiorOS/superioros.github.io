@@ -14,6 +14,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- SwiperJs CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/css/screenshots-styles.css" />
     <link rel="icon" href="assets/img/gallery.png" />
     <title>SuperiorOS Gallery</title>
@@ -79,78 +84,78 @@
       <p class="gallery-heading">Screenshots</p>
 
       <!-- GALLERY -->
-      <div class="container">
-        <span class="slider" id="slider1"></span>
-        <span class="slider" id="slider2"></span>
-        <span class="slider" id="slider3"></span>
-        <span class="slider" id="slider4"></span>
-        <span class="slider" id="slider5"></span>
-        <span class="slider" id="slider6"></span>
-        <span class="slider" id="slider7"></span>
-        <span class="slider" id="slider8"></span>
-        <span class="slider" id="slider9"></span>
-        <span class="slider" id="slider10"></span>
-
-        <div class="imgContainer">
-          <div class="slide_div" id="slide_1">
-            <img src="assets/img/Launcher.png" alt="" class="img" id="img1" />
-            <a href="#slider1" class="button" id="button1"></a>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/img/About_Team.png" alt="" />
           </div>
-          <div class="slide_div" id="slide_2">
-            <img src="assets/img/Lockscreen.png" alt="" class="img" id="img2" />
-            <a href="#slider2" class="button" id="button2"></a>
+          <div class="swiper-slide">
+            <img src="assets/img/About_Team.png" alt="" />
           </div>
-          <div class="slide_div" id="slide_3">
-            <img src="assets/img/Settings.png" alt="" class="img" id="img3" />
-            <a href="#slider3" class="button" id="button3"></a>
+          <div class="swiper-slide">
+            <img src="assets/img/About_Team.png" alt="" />
           </div>
-          <div class="slide_div" id="slide_4">
-            <img
-              src="assets/img/SuperiorLab.png"
-              alt=""
-              class="img"
-              id="img4"
-            />
-            <a href="#slider4" class="button" id="button4"></a>
+          <div class="swiper-slide">
+            <img src="assets/img/About_Team.png" alt="" />
           </div>
-          <div class="slide_div" id="slide_5">
-            <img src="assets/img/About_Team.png" alt="" class="img" id="img5" />
-            <a href="#slider5" class="button" id="button5"></a>
+          <div class="swiper-slide">
+            <img src="assets/img/About_Team.png" alt="" />
           </div>
-          <div class="slide_div" id="slide_6">
-            <img src="assets/img/Aboutphone.png" alt="" class="img" id="img6" />
-            <a href="#slider6" class="button" id="button6"></a>
+          <div class="swiper-slide">
+            <img src="assets/img/About_Team.png" alt="" />
           </div>
-          <div class="slide_div" id="slide_7">
-            <img
-              src="assets/img/Aboutphone_2.png"
-              alt=""
-              class="img"
-              id="img7"
-            />
-            <a href="#slider7" class="button" id="button7"></a>
+          <div class="swiper-slide">
+            <img src="assets/img/About_Team.png" alt="" />
           </div>
-          <div class="slide_div" id="slide_8">
-            <img src="assets/img/Appdrawr.png" alt="" class="img" id="img8" />
-            <a href="#slider8" class="button" id="button8"></a>
+          <div class="swiper-slide">
+            <img src="assets/img/About_Team.png" alt="" />
           </div>
-          <div class="slide_div" id="slide_9">
-            <img src="assets/img/QSPanel.png" alt="" class="img" id="img9" />
-            <a href="#slider9" class="button" id="button9"></a>
-          </div>
-          <div class="slide_div" id="slide_10">
-            <img src="assets/img/QSPanel_2.png" alt="" class="img" id="img10" />
-            <a href="#slider10" class="button" id="button10"></a>
+          <div class="swiper-slide">
+            <img src="assets/img/About_Team.png" alt="" />
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
+      <div class="swiper-pagination"></div>
       <!--END OF GALLERY -->
+
       <p class="credit">
         Made with <i class="fas fa-heart pulse"></i> by
         <a class="link" href="https://t.me/Spufyyffett">Spufyyffett</a>
         & <a class="link" href="https://t.me/Darkstar085">S I P U N</a>
       </p>
     </main>
+
     <script src="assets/js/main.js"></script>
+    <!-- SwiperJS javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 40,
+        centeredSlides: true,
+        grabCursor: true,
+        rewind: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          slideChange: function () {
+            document
+              .querySelectorAll(".swiper-slide")
+              .forEach(function (slide) {
+                slide.classList.remove("active");
+              });
+            this.slides[this.activeIndex].classList.add("active");
+          },
+        },
+      });
+    </script>
   </body>
 </html>
