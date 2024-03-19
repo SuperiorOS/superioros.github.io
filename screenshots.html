@@ -14,10 +14,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- SwiperJs CDN-->
+    <!-- SplideJs CDN-->
     <link
+      href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    "
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="assets/css/screenshots-styles.css" />
     <link rel="icon" href="assets/img/gallery.png" />
@@ -55,9 +57,9 @@
               <div class="mobile-logo">
                 <img src="assets/img/gallery.png" alt="SuperirOS" />
               </div>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li>
+              <li class="nav-links"><a href="index.html">Home</a></li>
+              <li class="nav-links"><a href="team.html">Team</a></li>
+              <li class="nav-links">
                 <a href="https://sourceforge.net/projects/superioros/files/"
                   >Download</a
                 >
@@ -84,63 +86,193 @@
       <p class="gallery-heading">Screenshots</p>
 
       <!-- GALLERY -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="assets/img/Launcher.png" target="_blank"
-              ><img src="assets/img/Launcher.png" alt="Screenshot"
-            /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="assets/img/Lockscreen.png" target="_blank"
-              ><img src="assets/img/Lockscreen.png" alt="Screenshot"
-            /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="assets/img/Appdrawr.png" target="_blank"
-              ><img src="assets/img/Appdrawr.png" alt="Screenshot"
-            /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="assets/img/QSPanel.png" target="_blank"
-              ><img src="assets/img/QSPanel.png" alt="Screenshot"
-            /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="assets/img/QSPanel_2.png" target="_blank"
-              ><img src="assets/img/QSPanel_2.png" alt="Screenshot"
-            /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="assets/img/Settings.png" target="_blank"
-              ><img src="assets/img/Settings.png" alt="Screenshot"
-            /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="assets/img/SuperiorLab.png" target="_blank"
-              ><img src="assets/img/SuperiorLab.png" alt="Screenshot"
-            /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="assets/img/About_Team.png" target="_blank"
-              ><img src="assets/img/About_Team.png" alt="Screenshot"
-            /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="assets/img/Aboutphone.png" target="_blank"
-              ><img src="assets/img/Aboutphone.png" alt="Screenshot"
-            /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="assets/img/Aboutphone_2.png" target="_blank"
-              ><img src="assets/img/Aboutphone_2.png" alt="Screenshot"
-            /></a>
-          </div>
+
+      <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/Launcher.png" target="_blank"
+                  ><img src="assets/img/Launcher.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 1</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/Lockscreen.png" target="_blank"
+                  ><img src="assets/img/Lockscreen.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 2</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/Appdrawr.png" target="_blank"
+                  ><img src="assets/img/Appdrawr.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 3</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/QSPanel.png" target="_blank"
+                  ><img src="assets/img/QSPanel.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 4</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/QSPanel_2.png" target="_blank"
+                  ><img src="assets/img/QSPanel_2.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 5</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/Settings.png" target="_blank"
+                  ><img src="assets/img/Settings.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 6</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/SuperiorLab.png" target="_blank"
+                  ><img src="assets/img/SuperiorLab.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 7</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/About_Team.png" target="_blank"
+                  ><img src="assets/img/About_Team.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 8</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/Aboutphone.png" target="_blank"
+                  ><img src="assets/img/Aboutphone.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 9</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slider-img">
+                <a href="assets/img/Aboutphone_2.png" target="_blank"
+                  ><img src="assets/img/Aboutphone_2.png" alt="Screenshot"
+                /></a>
+              </div>
+              <div class="content">
+                <div class="title">
+                  <h1>Image 10</h1>
+                </div>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit corporis error ad nostrum aliquid temporibus eum
+                  veritatis fugit eius deleniti consequuntur quos nemo,
+                  consequatur placeat reprehenderit nulla, a tenetur! Ipsum!
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-      <div class="swiper-pagination"></div>
+      </section>
       <!--END OF GALLERY -->
 
       <p class="credit">
@@ -151,34 +283,15 @@
     </main>
 
     <script src="assets/js/main.js"></script>
-    <!-- SwiperJS javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- SplideJS javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 40,
-        centeredSlides: true,
-        grabCursor: true,
+      var splide = new Splide(".splide", {
+        type: "fade",
         rewind: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        on: {
-          slideChange: function () {
-            document
-              .querySelectorAll(".swiper-slide")
-              .forEach(function (slide) {
-                slide.classList.remove("active");
-              });
-            this.slides[this.activeIndex].classList.add("active");
-          },
-        },
       });
+
+      splide.mount();
     </script>
   </body>
 </html>
