@@ -58,7 +58,11 @@ function toDark() {
   const supportLinks = document.getElementsByClassName("support-link-logo");
   document.documentElement.style.setProperty("--text-color", "#fff");
   document.documentElement.style.setProperty("--background", "rgb(26, 27, 30)");
-  document.documentElement.style.setProperty("--bullet", "#fff");
+  document.documentElement.style.setProperty("--img-border", "#fff");
+  document.documentElement.style.setProperty(
+    "--gallery-border",
+    "rgba(255, 255, 255, 0.3)"
+  );
 
   for (const sunElement of sunElements) {
     sunElement.style.display = "block";
@@ -122,7 +126,11 @@ function toLight() {
   const supportLinks = document.getElementsByClassName("support-link-logo");
   document.documentElement.style.setProperty("--text-color", "#000");
   document.documentElement.style.setProperty("--background", "#fff");
-  document.documentElement.style.setProperty("--bullet", "#000");
+  document.documentElement.style.setProperty("--img-border", "#8c4ade");
+  document.documentElement.style.setProperty(
+    "--gallery-border",
+    "rgba(0, 0, 0, 0.2)"
+  );
   for (const moonElement of moonElements) {
     moonElement.style.display = "block";
   }
