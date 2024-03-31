@@ -311,10 +311,6 @@ nav {
     font-size: 1.75rem;
   }
 
-  .swiper {
-    width: 90vw;
-  }
-
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
@@ -329,7 +325,7 @@ nav {
 
 @media (max-width: 500px) {
   .swiper-slide img {
-    max-height: 75vh;
+    max-height: 85vh;
   }
 }
 
