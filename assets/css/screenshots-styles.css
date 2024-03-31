@@ -324,8 +324,12 @@ nav {
 }
 
 @media (max-width: 500px) {
+  .swiper {
+    max-width: 75vw;
+  }
+  
   .swiper-slide img {
-    max-height: 85vh;
+    max-height: 90vh;
   }
 }
 
