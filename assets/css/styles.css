@@ -36,7 +36,7 @@ body {
 /* ---------------------------------------------------------------------- */
 /* STYLING NAVBAR */
 .nav-container {
-  padding: 8px 30px;
+  padding: 0px 30px;
 }
 
 .left {
@@ -81,7 +81,7 @@ ul {
 
 li {
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 16px;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.3043rem;

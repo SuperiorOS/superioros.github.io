@@ -22,12 +22,6 @@ function close() {
 }
 /* ------------------------------------------------------------------------------------- */
 // DARK THEME
-function isDarkMode() {
-  return (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
-}
 
 // Function to toggle theme based on the color scheme
 function toggleTheme() {
@@ -36,6 +30,13 @@ function toggleTheme() {
   } else {
     toLight();
   }
+}
+
+function isDarkMode() {
+  return (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
 }
 
 function theme() {
@@ -62,6 +63,10 @@ function toDark() {
   document.documentElement.style.setProperty(
     "--gallery-border",
     "rgba(255, 255, 255, 0.3)"
+  );
+  document.documentElement.style.setProperty(
+    "--bullet-pagintation-color",
+    "#fff"
   );
 
   for (const sunElement of sunElements) {
@@ -130,6 +135,10 @@ function toLight() {
   document.documentElement.style.setProperty(
     "--gallery-border",
     "rgba(0, 0, 0, 0.2)"
+  );
+  document.documentElement.style.setProperty(
+    "--bullet-pagintation-color",
+    "#000"
   );
   for (const moonElement of moonElements) {
     moonElement.style.display = "block";
