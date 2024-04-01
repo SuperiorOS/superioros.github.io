@@ -109,9 +109,17 @@ nav {
 
 .theme {
   background: transparent;
+  border-radius: 50%;
   border: none;
   display: flex;
   align-items: center;
+  transition: all 200ms ease;
+}
+
+@media (min-width: 800px) {
+  .theme:hover {
+    background: #9190904d;
+  }
 }
 
 .openMenu {
@@ -126,16 +134,16 @@ nav {
   color: var(--text-color);
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 .closeMenu {
   display: none;
-  cursor: pointer;
 }
 
 .sun,
 .moon {
-  padding: 6px 5px;
+  padding: 6px 6px;
   cursor: pointer;
   font-size: 1.75rem;
 }

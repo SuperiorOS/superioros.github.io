@@ -113,9 +113,17 @@ li:hover a::after {
 
 .theme {
   background: transparent;
+  border-radius: 50%;
   border: none;
   display: flex;
   align-items: center;
+  transition: all 200ms ease;
+}
+
+@media (min-width: 800px) {
+  .theme:hover {
+    background: #9190904d;
+  }
 }
 
 .openMenu {
@@ -130,11 +138,11 @@ li:hover a::after {
   color: var(--text-color);
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 .closeMenu {
   display: none;
-  cursor: pointer;
 }
 
 .sun,
