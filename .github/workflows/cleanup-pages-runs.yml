@@ -1,7 +1,8 @@
-name: Cleanup Workflow Runs
+name: Cleanup Workflow Runs & Deployments
 
 on:
   schedule:
+    # Every Sunday at midnight UTC
     - cron: "0 0 * * 0"
   workflow_dispatch:
 
@@ -13,6 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ------------------------
+      # Delete old workflow runs
+      # ------------------------
       - name: Delete old workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
@@ -20,3 +24,23 @@ jobs:
           repository: SuperiorOS/superioros.github.io
           retain_days: 7          
           keep_minimum_runs: 5    
+
+      # ------------------------
+      # Delete old deployments
+      # ------------------------
+      - name: Install GitHub CLI
+        run: sudo apt-get install -y gh jq
+
+      - name: Delete old deployments
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          REPO="${{ github.repository }}"
+
+          echo "Fetching deployments for $REPO..."
+          gh api repos/$REPO/deployments --paginate | jq -r '.[].id' | while read dep_id; do
+            echo "Deleting deployment ID: $dep_id"
+            gh api repos/$REPO/deployments/$dep_id -X DELETE || true
+          done
+
+          echo "Cleanup complete!"
