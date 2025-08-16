@@ -5,7 +5,7 @@
   --body-font: "Rubik", "Roboto", sans-serif;
   --text-color: #000;
   --background: #fff;
-  --bullet-pagintation-color: #fff;
+  --bullet-pagination-color: #fff;
   color-scheme: light dark;
 }
 
@@ -294,7 +294,7 @@ nav {
 }
 
 .swiper-pagination-bullet {
-  background: var(--bullet-pagintation-color);
+  background: var(--bullet-pagination-color);
 }
 
 .swiper-button-next,
@@ -355,6 +355,7 @@ nav {
   text-align: center;
   font-size: 0.976rem;
   color: var(--text-color);
+  margin-top: 25px;
 }
 
 .fa-heart {

@@ -210,7 +210,7 @@ li:hover a::after {
 /* STYLING LINKS */
 .footer-container {
   display: flex;
-  gap: 15px;
+  gap: 25px;
   justify-content: center;
   align-items: center;
   padding: 0 30px;
@@ -276,6 +276,7 @@ li:hover a::after {
   text-align: center;
   font-size: 0.976rem;
   color: var(--text-color);
+  margin-top: 170px;
 }
 
 .fa-heart {

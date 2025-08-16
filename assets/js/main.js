@@ -177,7 +177,7 @@ function toLight() {
   for (const role of roles) {
     const textColor = getComputedStyle(
       document.documentElement
-    ).getPropertyValue("--role-color");
+    ).getPropertyValue("--roleColor");
     role.style.color = textColor;
   }
 }
